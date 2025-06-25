@@ -1,3 +1,5 @@
-torch
-torchvision
 streamlit
+torch
+transformers
+pandas
+scikit-learn
