@@ -1,7 +1,6 @@
 # app.py - Streamlit UI for Fake News Detection using BERT
 
 import streamlit as st
-import torch
 from transformers import BertTokenizer, BertForSequenceClassification
 
 # Load model and tokenizer
@@ -43,4 +42,3 @@ if st.button("Check News"):
             st.error("This news appears to be **Fake**.")
     else:
         st.warning("⚠️ Please enter some news content to check.")
-        print("Transformers is working!")
