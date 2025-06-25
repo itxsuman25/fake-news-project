@@ -10,7 +10,7 @@ Original file is located at
 from google.colab import drive
 drive.mount('/content/drive')
 
-!pip install transformers tqdm
+!pip install transformers
 
 # ✅ Optimized BERT Fake News Detection (Colab RAM Friendly Version)
 import pandas as pd
