@@ -14,7 +14,6 @@ drive.mount('/content/drive')
 
 # ✅ Optimized BERT Fake News Detection (Colab RAM Friendly Version)
 import pandas as pd
-import torch
 from transformers import BertTokenizer, BertForSequenceClassification
 from torch.optim import AdamW
 from torch.utils.data import Dataset, DataLoader
