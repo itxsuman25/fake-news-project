@@ -2,7 +2,7 @@
 # app.py - Streamlit UI for Fake News Detection using BERT
 
 import streamlit as st
-import torch
+import torch==1.10.0
 from transformers import BertTokenizer, BertForSequenceClassification
 
 # Load model and tokenizer
