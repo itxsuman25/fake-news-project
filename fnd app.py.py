@@ -12,7 +12,7 @@ def load_model():
     try:
         model.load_state_dict(torch.load("bert_fake_news_model.pt", map_location=torch.device("cpu")))
     except FileNotFoundError:
-        st.error("❌ Model file 'bert_fake_news_model.pt' not found. Please make sure it is in the same directory.")
+        st.error("Model file 'bert_fake_news_model.pt' not found. Please make sure it is in the same directory.")
         st.stop()
     model.eval()
     return tokenizer, model
@@ -29,17 +29,18 @@ def predict(text):
     return predicted_class
 
 # UI Layout
-st.title("📰 Fake News Detector - BERT")
+st.title("Fake News Detector - BERT")
 st.markdown("Enter any news article text below to check if it's **Real** or **Fake**.")
 
-user_input = st.text_area("📝 Enter News Content")
+user_input = st.text_area("Enter News Content")
 
 if st.button("Check News"):
     if user_input.strip():
         prediction = predict(user_input)
         if prediction == 1:
-            st.success("✅ This news appears to be **Real**.")
+            st.success("This news appears to be **Real**.")
         else:
-            st.error("🚫 This news appears to be **Fake**.")
+            st.error("This news appears to be **Fake**.")
     else:
         st.warning("⚠️ Please enter some news content to check.")
+        print("Transformers is working!")
